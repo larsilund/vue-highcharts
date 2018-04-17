@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted() {
-    if (!this.getChart() && this.options) {
+    if (!this.getChart() && (Object.keys(this.options).length === 0 && this.options.constructor === Object) {
       this.init()
     }
   },
